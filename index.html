@@ -1,61 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Changsha Xiaokai Industrial Design Co., Ltd.</title>
-  <meta name="description" content="OEM Smart Cabinets, AI Display Cabinets, Refrigerated Fresh Cabinets, Sheet Metal Fabrication, Custom Design & Manufacturing in China.">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional mechanical design, automation equipment & industrial solution provider from China. Custom machinery design and technical support for global clients.">
+    <title>Industrial Machinery & Mechanical Design | Professional Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f5f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #222831;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+        }
+
+        .nav-logo {
+            color: #0092ca;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* 横幅区域 */
+        .banner {
+            margin-top: 60px;
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(34,40,49,0.75), rgba(0,146,202,0.35));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 40px;
+            color: #fff;
+        }
+
+        .banner-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .banner-desc {
+            font-size: 18px;
+            max-width: 600px;
+            opacity: 0.95;
+        }
+
+        /* 主体容器 */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #222831;
+            margin-bottom: 16px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 3px;
+            background-color: #0092ca;
+            margin: 0 auto 50px;
+        }
+
+        /* 产品卡片区域 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: #222831;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* 联系区域 */
+        .contact-section {
+            background-color: #222831;
+            color: #fff;
+            padding: 60px 24px;
+            margin-top: 60px;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0092ca;
+        }
+
+        .contact-info {
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .contact-info a {
+            color: #0092ca;
+            text-decoration: none;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .banner {
+                height: 400px;
+            }
+            .banner-title {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 320px;
+                margin-top: 52px;
+            }
+            .banner-title {
+                font-size: 26px;
+            }
+            .banner-desc {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Industrial Mechanical Design</div>
+        </div>
+    </nav>
 
-  <!-- 导航栏 -->
-  <nav class="navbar">
+    <!-- 首页横幅 -->
+    <section class="banner">
+        <img src="banner.jpg" alt="Industrial Equipment & Mechanical Design">
+        <div class="banner-overlay">
+            <h1 class="banner-title">Professional Mechanical & Automation Solutions</h1>
+            <p class="banner-desc">Custom machinery design, equipment development and one-stop technical service for global industrial clients.</p>
+        </div>
+    </section>
+
+    <!-- 产品案例区域 -->
     <div class="container">
-      <a href=" " class="logo">Xiaokai Design</a >
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a ></li>
-        <li><a href="products.html">Products</a ></li>
-        <li><a href="about.html">About Us</a ></li>
-        <li><a href="contact.html">Contact</a ></li>
-      </ul>
+        <h2 class="section-title">Our Products & Projects</h2>
+        <div class="divider"></div>
+        <div class="product-grid">
+            <!-- 案例1 -->
+            <div class="card">
+                <img class="card-img" src="pic1.jpg" alt="Mechanical Project 1">
+                <div class="card-content">
+                    <h3 class="card-title">Mechanical Equipment Design</h3>
+                    <p class="card-text">High-precision mechanical structure design and customized development for industrial automation devices.</p>
+                </div>
+            </div>
+            <!-- 案例2 -->
+            <div class="card">
+                <img class="card-img" src="pic2.jpg" alt="Mechanical Project 2">
+                <div class="card-content">
+                    <h3 class="card-title">Automation System Solution</h3>
+                    <p class="card-text">Complete automation equipment design, assembly drawing and technical supporting service.</p>
+                </div>
+            </div>
+            <!-- 案例3 -->
+            <div class="card">
+                <img class="card-img" src="pic3.jpg" alt="Mechanical Project 3">
+                <div class="card-content">
+                    <h3 class="card-title">Industrial Custom Service</h3>
+                    <p class="card-text">Professional one-on-one custom design according to customer requirements and industry standards.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- 首页内容 -->
-  <header>
-    <div class="container">
-      <h1>Changsha Xiaokai Industrial Design Co., Ltd.</h1>
-      Smart Cabinet · AI Display · Sheet Metal Fabrication
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      < img src="images/hero.jpg" alt="Smart cabinet solution">
-      <h2>Custom Smart Cabinet & Sheet Metal Solutions</h2>
-      <a href="products.html" class="btn">View Products</a >
-    </div>
-  </section>
-
-  <section class="core-business">
-    <div class="container">
-      <h3>Our Core Business</h3>
-      <ul>
-        <li>Smart Cabinets & Lockers</li>
-        <li>AI Intelligent Display Cabinets</li>
-        <li>Refrigerated Fresh Cabinets</li>
-        <li>Energy Storage Boxes & Cabinets</li>
-        <li>Sheet Metal Structure Design & OEM</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      Email: xinkon@designxk.com | Address: Changsha, Hunan, China
-    </div>
-  </footer>
-
+    <!-- 联系我们（已填入邮箱+地址） -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Contact Us</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:xinkon@designxk.com">xinkon@designxk.com</a></p>
+                <p>Address: Changsha, Hunan, China</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
