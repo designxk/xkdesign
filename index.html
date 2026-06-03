@@ -3,269 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional mechanical design, automation equipment & industrial solution provider from China. Custom machinery design and technical support for global clients.">
-    <title>Industrial Machinery & Mechanical Design | Professional Solutions</title>
+    <title>Custom Smart Locker | Xinke Smart Manufacturer</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-
-        body {
-            background-color: #f5f6f8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* 顶部导航 */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #222831;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            z-index: 999;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px 24px;
-        }
-
-        .nav-logo {
-            color: #0092ca;
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        /* 横幅区域 */
-        .banner {
-            margin-top: 60px;
-            width: 100%;
-            height: 500px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .banner-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(34,40,49,0.75), rgba(0,146,202,0.35));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 40px;
-            color: #fff;
-        }
-
-        .banner-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .banner-desc {
-            font-size: 18px;
-            max-width: 600px;
-            opacity: 0.95;
-        }
-
-        /* 主体容器 */
-        .container {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 24px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            color: #222831;
-            margin-bottom: 16px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 3px;
-            background-color: #0092ca;
-            margin: 0 auto 50px;
-        }
-
-        /* 产品卡片区域 */
-        .product-grid {
+        *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+        body{color:#333;line-height:1.6;}
+        /*导航栏*/
+        header{background:#192940;color:#fff;padding:15px 5%;position:sticky;top:0;z-index:99;}
+        .nav-wrap{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:22px;font-weight:bold;}
+        .nav-a a{color:#fff;text-decoration:none;margin:0 12px;}
+        /*首屏横幅*/
+        .banner{background:#243b5c;color:#fff;padding:80px 5%;text-align:center;}
+        .banner h1{font-size:36px;margin-bottom:15px;}
+        .banner p{max-width:700px;margin:0 auto 30px;font-size:18px;opacity:0.9;}
+        .btn{display:inline-block;background:#ff7822;color:#fff;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:bold;}
+        /*通用区块*/
+        section{max-width:1200px;margin:0 auto;padding:60px 5%;}
+        .sec-title{text-align:center;font-size:28px;margin-bottom:45px;color:#192940;position:relative;}
+        .sec-title::after{content:"";width:70px;height:3px;background:#ff7822;position:absolute;left:50%;transform:translateX(-50%);bottom:-12px;}
+        /*产品介绍*/
+        .product-box{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+        .product-text h3{font-size:22px;margin-bottom:16px;color:#192940;}
+        .product-text p{margin-bottom:12px;font-size:16px;}
+        .param-list{margin:20px 0;}
+        .param-list li{list-style:none;padding:6px 0;border-bottom:1px solid #eee;}
+        /* 产品图片容器 */
+        .product-images {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 10px;
         }
-
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 24px rgba(0,0,0,0.15);
-        }
-
-        .card-img {
+        .product-images img {
             width: 100%;
-            height: 240px;
-            object-fit: cover;
+            height: auto;
+            border-radius: 4px;
         }
-
-        .card-content {
-            padding: 24px;
-        }
-
-        .card-title {
-            font-size: 20px;
-            color: #222831;
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            color: #555;
-            font-size: 15px;
-        }
-
-        /* 联系区域 */
-        .contact-section {
-            background-color: #222831;
-            color: #fff;
-            padding: 60px 24px;
-            margin-top: 60px;
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #0092ca;
-        }
-
+        /*产品优势*/
+        .advantage-bg{background:#f7f9fc;}
+        .adv-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+        .adv-item{background:#fff;padding:25px;border-radius:6px;box-shadow:0 2px 10px #e4e8f0;}
+        .adv-item h4{font-size:18px;margin-bottom:10px;color:#192940;}
+        /*适用场景*/
+        .scene-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+        .scene-item{padding:20px;border:1px solid #eee;text-align:center;border-radius:5px;}
+        /*询盘表单*/
+        .form-bg{background:#192940;color:#fff;}
+        .form-wrap{max-width:700px;margin:0 auto;}
+        input,textarea{width:100%;padding:12px;margin:8px 0;border:none;border-radius:3px;font-size:15px;}
+        textarea{min-height:120px;resize:none;}
+        .submit-btn{background:#ff7822;color:#fff;font-weight:bold;cursor:pointer;font-size:16px;padding:15px;}
+        /*页脚*/
+        footer{background:#111c2d;color:#aaa;text-align:center;padding:30px;}
         .contact-info {
-            font-size: 17px;
-            line-height: 2;
+            margin-bottom: 15px;
         }
-
-        .contact-info a {
-            color: #0092ca;
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .social-links a {
+            color: #aaa;
             text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
         }
-
-        /* 响应式适配 */
-        @media (max-width: 992px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .banner {
-                height: 400px;
-            }
-            .banner-title {
-                font-size: 34px;
-            }
+        .social-links a:hover {
+            color: #ff7822;
         }
-
-        @media (max-width: 640px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-            .banner {
-                height: 320px;
-                margin-top: 52px;
-            }
-            .banner-title {
-                font-size: 26px;
-            }
-            .banner-desc {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 24px;
-            }
+        /*移动端适配*/
+        @media(max-width:768px){
+            .product-box{grid-template-columns:1fr;}
+            .banner h1{font-size:28px;}
+            .nav-a{display:none;}
         }
     </style>
 </head>
 <body>
-    <!-- 顶部导航 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Industrial Mechanical Design</div>
-        </div>
-    </nav>
-
-    <!-- 首页横幅 -->
-    <section class="banner">
-        <img src="banner.jpg" alt="Industrial Equipment & Mechanical Design">
-        <div class="banner-overlay">
-            <h1 class="banner-title">Professional Mechanical & Automation Solutions</h1>
-            <p class="banner-desc">Custom machinery design, equipment development and one-stop technical service for global industrial clients.</p>
-        </div>
-    </section>
-
-    <!-- 产品案例区域 -->
-    <div class="container">
-        <h2 class="section-title">Our Products & Projects</h2>
-        <div class="divider"></div>
-        <div class="product-grid">
-            <!-- 案例1 -->
-            <div class="card">
-                <img class="card-img" src="pic1.jpg" alt="Mechanical Project 1">
-                <div class="card-content">
-                    <h3 class="card-title">Mechanical Equipment Design</h3>
-                    <p class="card-text">High-precision mechanical structure design and customized development for industrial automation devices.</p>
-                </div>
-            </div>
-            <!-- 案例2 -->
-            <div class="card">
-                <img class="card-img" src="pic2.jpg" alt="Mechanical Project 2">
-                <div class="card-content">
-                    <h3 class="card-title">Automation System Solution</h3>
-                    <p class="card-text">Complete automation equipment design, assembly drawing and technical supporting service.</p>
-                </div>
-            </div>
-            <!-- 案例3 -->
-            <div class="card">
-                <img class="card-img" src="pic3.jpg" alt="Mechanical Project 3">
-                <div class="card-content">
-                    <h3 class="card-title">Industrial Custom Service</h3>
-                    <p class="card-text">Professional one-on-one custom design according to customer requirements and industry standards.</p>
-                </div>
-            </div>
+<!--导航-->
+<header>
+    <div class="nav-wrap">
+        <div class="logo">Xinke Smart</div>
+        <div class="nav-a">
+            <a href=" ">Product</a >
+            <a href="#advantage">Advantage</a >
+            <a href="#scene">Application</a >
+            <a href="#inquiry">Get Quote</a >
         </div>
     </div>
+</header>
 
-    <!-- 联系我们（已填入邮箱+地址） -->
-    <section class="contact-section">
-        <div class="contact-container">
-            <h2 class="contact-title">Contact Us</h2>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:xinkon@designxk.com">xinkon@designxk.com</a></p>
-                <p>Address: Changsha, Hunan, China</p>
-            </div>
+<!--首屏-->
+<div class="banner">
+    <h1>OEM ODM Sheet Metal Smart Storage Lockers</h1>
+    <p>Custom Size / Control System / Surface Finish | Factory Direct Supply For Warehouse, Apartment, Gym, Office</p >
+    <a href="#inquiry" class="btn">Request Custom Quotation</a >
+</div>
+
+<!--产品详情-->
+<section id="product">
+    <h2 class="sec-title">Product Introduction</h2>
+    <div class="product-box">
+        <div class="product-text">
+            <h3>Intelligent Grid Storage Cabinet</h3>
+            <p>Full sheet metal cold rolled steel smart cabinet, independent compartment design, support fingerprint / RFID / password / remote unlock control system, all structure & size customizable per client drawing.</p >
+            <ul class="param-list">
+                <li>✔ Material: Cold Rolled Steel / Stainless Steel Optional</li>
+                <li>✔ MOQ: 10 Units, OEM & ODM Acceptable</li>
+                <li>✔ Trade Term: EXW Factory / FOB Shanghai</li>
+                <li>✔ Production Lead Time:7~12 Working Days After Deposit</li>
+                <li>✔ Custom: Cabinet Size, Door Quantity, Surface Paint, Electronic Program</li>
+            </ul>
+            <a href="#inquiry" class="btn">Send Your Drawing For Best Price</a >
         </div>
-    </section>
+        <div class="product-images">
+            < img src="/IMG/21.jpg" alt="Smart Locker">
+            < img src="/IMG/31.jpg" alt="Smart Locker Detail">
+            < img src="/IMG/30.jpg" alt="Smart Locker Application">
+        </div>
+    </div>
+</section>
+
+<!--产品优势-->
+<section id="advantage" class="advantage-bg">
+    <h2 class="sec-title">Our Core Advantages</h2>
+    <div class="adv-wrap">
+        <div class="adv-item">
+            <h4>Factory Direct Production</h4>
+            <p>Own sheet metal workshop, cutting/bending/welding/spraying full in-house production, competitive factory price.</p >
+        </div>
+        <div class="adv-item">
+            <h4>Full Customization</h4>
+            <p>Custom compartment quantity, dimension, lock mode, cabinet color according customer’s project demand.</p >
+        </div>
+        <div class="adv-item">
+            <h4>Sturdy Anti-rust Structure</h4>
+            <p>High thickness steel plate, electrostatic spray anti-corrosion coating, long service life indoor & outdoor.</p >
+        </div>
+        <div class="adv-item">
+            <h4>Strict Pre-ship QC</h4>
+            <p>Every cabinet tested on lock & electric system before delivery, reduce after-sale failure rate.</p >
+        </div>
+  <div class="adv-item">
+            <h4>Strict Pre-ship IPQC</h4>
+            <p>Every cabinet tested on lock & electric system before delivery, reduce after-sale failure rate.</p >
+        </div>
+  <div class="adv-item">
+            <h4>Strict Pre-ship OQC</h4>
+            <p>Every cabinet tested on lock & electric system before delivery, reduce after-sale failure rate.</p >
+        </div>
+    </div>
+</section>
+
+<!--适用场景-->
+<section id="scene">
+    <h2 class="sec-title">Wide Application Scenarios</h2>
+    <div class="scene-wrap">
+        <div class="scene-item">Apartment Parcel Locker</div>
+        <div class="scene-item">Gym Sport Storage Cabinet</div>
+        <div class="scene-item">Office Document Locker</div>
+        <div class="scene-item">Warehouse Parts Storage</div>
+        <div class="scene-item">School Student Locker</div>
+        <div class="scene-item">Hospital Item Cabinet</div>
+    </div>
+</section>
+
+<!--询盘表单【替换formspree链接即可收邮件】-->
+<section id="inquiry" class="form-bg">
+    <h2 class="sec-title" style="color:#fff;">Send Us Inquiry For Best Offer</h2>
+    <div class="form-wrap">
+        <!--把action="xxx"替换成你自己Formspree表单地址-->
+<!-- 表单容器 -->
+<div>
+  <form id="inquiryForm">
+    <!-- 表单校验绕过、域名白名单配置 -->
+
+    <input type="text" name="name" placeholder="Your Full Name" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
+
+    <input type="email" name="email" placeholder="Your Email Address" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
+
+    <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+
+    <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
+      Send Inquiry
+    </button>
+  </form>
+
+  <!-- 成功提示弹窗 -->
+  <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
+    Your message sent successfully! We will contact you soon.
+  </div>
+  <!-- 失败提示弹窗 -->
+  <div id="errorTip" style="display:none;background:#dc3545;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
+    Submit failed, please try again later.
+  </div>
+</div>
+
+<script>
+const form = document.getElementById('inquiryForm');
+const successTip = document.getElementById('successTip');
+const errorTip = document.getElementById('errorTip');
+const submitBtn = document.getElementById('submitBtn');
+// Formspark提交接口
+const submitUrl = 'https://submit-form.com/2V8t6qvFX';
+
+form.addEventListener('submit', async function(e){
+  e.preventDefault(); // 阻止原生跳转（关键，不再跳第三方错误页面）
+  successTip.style.display = 'none';
+  errorTip.style.display = 'none';
+  submitBtn.disabled = true;
+  submitBtn.innerText = 'Sending...';
+
+  const formData = new FormData(form);
+  try {
+    await fetch(submitUrl, {
+      method: 'POST',
+      body: formData
+    })
+    // 提交成功
+    successTip.style.display = 'block';
+    form.reset(); // 清空表单填写内容
+  } catch(err){
+    // 提交异常
+    errorTip.style.display = 'block';
+  }
+  submitBtn.disabled = false;
+  submitBtn.innerText = 'Send Inquiry';
+})
+</script>
+    </div>
+</section>
+
+<!--页脚-->
+<footer>
+    <div class="contact-info">
+        <p><strong>Xinke Smart</strong></p >
+        <p>Address: Changsha, Hunan, China</p >
+        <p>Email: xinkon@desginxk.com</p >
+        <p>WhatsApp: +8518570081859</p >
+    </div>
+    <div class="social-links">
+        <!-- 预留社交媒体链接位置 -->
+        <a href="#" title="Facebook">F</a >
+        <a href="#" title="LinkedIn">L</a >
+        <a href="#" title="WhatsApp">W</a >
+    </div>
+    <p>&copy; 2026 Xinke Smart. All rights reserved.</p >
+</footer>
 </body>
 </html>
