@@ -168,30 +168,19 @@
 </section>
 
 <!--询盘表单【替换formspree链接即可收邮件】-->
-<section id="inquiry" class="form-bg">
-    <h2 class="sec-title" style="color:#fff;">Send Us Inquiry For Best Offer</h2>
-    <div class="form-wrap">
-        <!--把action="xxx"替换成你自己Formspree表单地址-->
-<!-- 表单容器 -->
 <div>
-<form action="https://submit-form.com/2V8t6qvFX" target="_blank">
-  <!-- 姓名 -->
-  <input type="text" name="name" placeholder="Your Full Name" required>
-  <br><br>
-  <!-- 客户邮箱 -->
-  <input type="email" name="email" placeholder="Your Email Address" required>
-  <br><br>
-  <!-- 客户留言 -->
-  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-  <br><br>
-  <button type="submit">Send Inquiry</button>
-</form>
+  <form id="inquiryForm">
+    <input type="text" name="name" placeholder="Your Full Name" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
+    <input type="email" name="email" placeholder="Your Email Address" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
+    <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+    <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
+      Send Inquiry
+    </button>
+  </form>
 
-  <!-- 成功提示弹窗 -->
   <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
     Your message sent successfully! We will contact you soon.
   </div>
-  <!-- 失败提示弹窗 -->
   <div id="errorTip" style="display:none;background:#dc3545;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
     Submit failed, please try again later.
   </div>
@@ -202,35 +191,23 @@ const form = document.getElementById('inquiryForm');
 const successTip = document.getElementById('successTip');
 const errorTip = document.getElementById('errorTip');
 const submitBtn = document.getElementById('submitBtn');
-// Formspark提交接口
-const submitUrl = 'https://submit-form.com/2V8t6qvFX';
+// 已填好你的专属链接
+const submitUrl = 'https://submit.forminit.com/f/rwwydb3t50o';
 
-form.addEventListener('submit', async function(e){
-  e.preventDefault(); // 阻止原生跳转（关键，不再跳第三方错误页面）
-  successTip.style.display = 'none';
-  errorTip.style.display = 'none';
-  submitBtn.disabled = true;
-  submitBtn.innerText = 'Sending...';
-
-  const formData = new FormData(form);
-  try {
-    await fetch(submitUrl, {
-      method: 'POST',
-      body: formData
-    })
-    // 提交成功
-    successTip.style.display = 'block';
-    form.reset(); // 清空表单填写内容
-  } catch(err){
-    // 提交异常
-    errorTip.style.display = 'block';
+form.addEventListener('submit', async e=>{
+  e.preventDefault();
+  successTip.style.display='none';errorTip.style.display='none';
+  submitBtn.disabled=true;submitBtn.innerText='Sending...';
+  const fd=new FormData(form);
+  try{
+    await fetch(submitUrl,{method:'POST',body:fd});
+    successTip.style.display='block';form.reset();
+  }catch{
+    errorTip.style.display='block';
   }
-  submitBtn.disabled = false;
-  submitBtn.innerText = 'Send Inquiry';
+  submitBtn.disabled=false;submitBtn.innerText='Send Inquiry';
 })
 </script>
-    </div>
-</section>
 
 <!--页脚-->
 <footer>
