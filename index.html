@@ -174,10 +174,14 @@
     <h2 class="sec-title" style="color:#fff;">Send Us Inquiry For Best Offer</h2>
     <div class="form-wrap">
         <!--把action="xxx"替换成你自己Formspree表单地址-->
- <div style="max-width:90%;margin:30px auto;">
+<div style="max-width:90%;margin:30px auto;">
 <form action="https://formsubmit.co/744304089@qq.com" method="POST">
+    <!-- 提交成功强制跳转你的首页，屏蔽中间跳转页 -->
     <input type="hidden" name="_redirect" value="https://www.designxk.com">
+    <!-- 关闭人机验证弹窗 -->
     <input type="hidden" name="_captcha" value="false">
+    <!-- 关闭激活中转页面，激活一次永久生效 -->
+    <input type="hidden" name="_autoresponse" value="">
 
   <input type="text" name="name" placeholder="Your Full Name" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
@@ -193,7 +197,6 @@ style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;
   </button>
 </form>
 </div>
-    </div>
 </section>
 
 <!--页脚-->
