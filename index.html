@@ -168,8 +168,9 @@
 </section>
 
 <!--询盘表单【替换formspree链接即可收邮件】-->
-<div style="max-width:92%;margin:0 auto;padding:20px 0;">
-  <form id="inquiryForm">
+<!-- 表单容器 -->
+<div>
+<form id="inquiryForm">
     <input type="text" name="name" placeholder="Your Full Name" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
     <input type="email" name="email" placeholder="Your Email Address" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
     <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
@@ -178,9 +179,11 @@
     </button>
   </form>
 
+  <!-- 成功提示弹窗 -->
   <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
     Your message sent successfully! We will contact you soon.
   </div>
+  <!-- 失败提示弹窗 -->
   <div id="errorTip" style="display:none;background:#dc3545;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
     Submit failed, please try again later.
   </div>
