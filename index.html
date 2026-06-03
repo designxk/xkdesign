@@ -168,25 +168,34 @@
 </section>
 
 <!--询盘表单【替换formspree链接即可收邮件】-->
-<!-- 表单容器 -->
-<div>
+<!--外层居中容器，保证表单页面居中-->
+<div style="max-width:90%;margin:30px auto;">
 <form id="inquiryForm">
-    <input type="text" name="name" placeholder="Your Full Name" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
-    <input type="email" name="email" placeholder="Your Email Address" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
-    <textarea name="message" placeholder="Your Message" rows="5" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
-    <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
-      Send Inquiry
-    </button>
-  </form>
+  <!-- 姓名输入框 -->
+  <input type="text" name="name" placeholder="Your Full Name" required
+style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
 
-  <!-- 成功提示弹窗 -->
-  <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
-    Your message sent successfully! We will contact you soon.
-  </div>
-  <!-- 失败提示弹窗 -->
-  <div id="errorTip" style="display:none;background:#dc3545;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
-    Submit failed, please try again later.
-  </div>
+  <!-- 邮箱输入框 -->
+  <input type="email" name="email" placeholder="Your Email Address" required
+style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
+
+  <!-- 留言框 -->
+  <textarea name="message" placeholder="Your Message" rows="5" required
+style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
+
+  <!-- 优化后大号橙色按钮 -->
+  <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
+    Send Inquiry
+  </button>
+</form>
+
+<!-- 提交提示框 -->
+<div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
+Your message sent successfully! We will contact you soon.
+</div>
+<div id="errorTip" style="display:none;background:#dc3545;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
+Submit failed, please try again later.
+</div>
 </div>
 
 <script>
@@ -194,23 +203,27 @@ const form = document.getElementById('inquiryForm');
 const successTip = document.getElementById('successTip');
 const errorTip = document.getElementById('errorTip');
 const submitBtn = document.getElementById('submitBtn');
+//已替换为你的Forminit专属接口
 const submitUrl = 'https://submit.forminit.com/f/rwwydb3t50o';
 
-form.addEventListener('submit', async e=>{
-  e.preventDefault();
-  successTip.style.display='none';errorTip.style.display='none';
-  submitBtn.disabled=true;submitBtn.innerText='Sending...';
-  const fd=new FormData(form);
-  try{
-    await fetch(submitUrl,{method:'POST',body:fd});
-    successTip.style.display='block';form.reset();
-  }catch{
-    errorTip.style.display='block';
-  }
-  submitBtn.disabled=false;submitBtn.innerText='Send Inquiry';
+form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    successTip.style.display='none';
+    errorTip.style.display='none';
+    submitBtn.disabled=true;
+    submitBtn.innerText='Sending...';
+    const formData=new FormData(form);
+    try{
+        await fetch(submitUrl,{method:'POST',body:formData});
+        successTip.style.display='block';
+        form.reset();
+    }catch{
+        errorTip.style.display='block';
+    }
+    submitBtn.disabled=false;
+    submitBtn.innerText='Send Inquiry';
 })
 </script>
-
 <!--页脚-->
 <footer>
     <div class="contact-info">
