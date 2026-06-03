@@ -115,9 +115,9 @@
             <a href="#inquiry" class="btn">Send Your Drawing For Best Price</a >
         </div>
         <div class="product-images">
-            < img src="/IMG/21.jpg" alt="Smart Locker">
-            < img src="/IMG/31.jpg" alt="Smart Locker Detail">
-            < img src="/IMG/30.jpg" alt="Smart Locker Application">
+            < img src="https://via.placeholder.com/300x200.png?text=Product+Image+1" alt="Smart Locker">
+            < img src="https://via.placeholder.com/300x200.png?text=Product+Image+2" alt="Smart Locker Detail">
+            < img src="https://via.placeholder.com/300x200.png?text=Product+Image+3" alt="Smart Locker Application">
         </div>
     </div>
 </section>
@@ -138,16 +138,18 @@
             <h4>Sturdy Anti-rust Structure</h4>
             <p>High thickness steel plate, electrostatic spray anti-corrosion coating, long service life indoor & outdoor.</p >
         </div>
-      
-  <div class="adv-item">
-            <h4>Intelligent System Integration Capability</h4>
-            <p>We seamlessly integrate embedded electronic controls, QR code scanning systems and IoT connectivity modules into custom lockers, ensuring compatible interaction with your existing management platforms out of the box.</p >
-        </div>
-  <div class="adv-item">
+         <div class="adv-item">
             <h4>Customized Engineering Expertise</h4>
-            <p>We offer fully tailored sheet metal fabrication for smart locker solutions, with in-house design teams adapting dimensions, compartment layouts and surface finishes to match unique application scenarios from retail to industrial storage.</p >
+            <p>We offer fully tailored sheet metal fabrication for smart locker solutions, with in-house design teams adapting dimensions, compartment layouts and surface finishes to match unique application scenarios from retail to industrial storage.
+</p >
         </div>
-          <div class="adv-item">
+         <div class="adv-item">
+            <h4>Intelligent System Integration Capability</h4>
+            <p>We seamlessly integrate embedded electronic controls, QR code scanning systems and IoT connectivity modules into custom lockers, ensuring compatible interaction with your existing management platforms out of the box.
+
+</p >
+        </div>
+        <div class="adv-item">
             <h4>Strict Pre-ship QC</h4>
             <p>Every cabinet tested on lock & electric system before delivery, reduce after-sale failure rate.</p >
         </div>
@@ -168,28 +170,27 @@
 </section>
 
 <!--询盘表单【替换formspree链接即可收邮件】-->
-<!--外层居中容器，保证表单页面居中-->
+<section id="inquiry" class="form-bg">
+    <h2 class="sec-title" style="color:#fff;">Send Us Inquiry For Best Offer</h2>
+    <div class="form-wrap">
+        <!--把action="xxx"替换成你自己Formspree表单地址-->
+      <!--询盘表单【新Forminit收邮件，居中+原样式不变】-->
 <div style="max-width:90%;margin:30px auto;">
 <form id="inquiryForm">
-  <!-- 姓名输入框 -->
   <input type="text" name="name" placeholder="Your Full Name" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
 
-  <!-- 邮箱输入框 -->
   <input type="email" name="email" placeholder="Your Email Address" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
 
-  <!-- 留言框 -->
   <textarea name="message" placeholder="Your Message" rows="5" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
 
-  <!-- 优化后大号橙色按钮 -->
   <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
     Send Inquiry
   </button>
 </form>
 
-<!-- 提交提示框 -->
 <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
 Your message sent successfully! We will contact you soon.
 </div>
@@ -203,7 +204,7 @@ const form = document.getElementById('inquiryForm');
 const successTip = document.getElementById('successTip');
 const errorTip = document.getElementById('errorTip');
 const submitBtn = document.getElementById('submitBtn');
-//已替换为你的Forminit专属接口
+//你的专属收信接口，无需再改密钥
 const submitUrl = 'https://submit.forminit.com/f/rwwydb3t50o';
 
 form.addEventListener('submit',async e=>{
@@ -224,13 +225,16 @@ form.addEventListener('submit',async e=>{
     submitBtn.innerText='Send Inquiry';
 })
 </script>
+    </div>
+</section>
+
 <!--页脚-->
 <footer>
     <div class="contact-info">
         <p><strong>Xinke Smart</strong></p >
         <p>Address: Changsha, Hunan, China</p >
         <p>Email: xinkon@desginxk.com</p >
-        <p>WhatsApp: +8518570081859</p >
+        <p>WhatsApp: +8618570081859</p >
     </div>
     <div class="social-links">
         <!-- 预留社交媒体链接位置 -->
