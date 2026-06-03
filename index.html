@@ -176,7 +176,10 @@
         <!--把action="xxx"替换成你自己Formspree表单地址-->
       <!--询盘表单【新Forminit收邮件，居中+原样式不变】-->
 <div style="max-width:90%;margin:30px auto;">
-<form id="inquiryForm">
+<!--居中表单容器-->
+<div style="max-width:90%;margin:30px auto;">
+<!--原生POST提交，不用JS、不会跨域报错-->
+<form action="https://submit.forminit.com/f/rwwydb3t50o" method="POST">
   <input type="text" name="name" placeholder="Your Full Name" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
 
@@ -186,10 +189,11 @@ style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;
   <textarea name="message" placeholder="Your Message" rows="5" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
 
-  <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
+  <button type="submit" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
     Send Inquiry
   </button>
 </form>
+</div>
 
 <div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
 Your message sent successfully! We will contact you soon.
@@ -199,32 +203,7 @@ Submit failed, please try again later.
 </div>
 </div>
 
-<script>
-const form = document.getElementById('inquiryForm');
-const successTip = document.getElementById('successTip');
-const errorTip = document.getElementById('errorTip');
-const submitBtn = document.getElementById('submitBtn');
-//你的专属收信接口，无需再改密钥
-const submitUrl = 'https://submit.forminit.com/f/rwwydb3t50o';
 
-form.addEventListener('submit',async e=>{
-    e.preventDefault();
-    successTip.style.display='none';
-    errorTip.style.display='none';
-    submitBtn.disabled=true;
-    submitBtn.innerText='Sending...';
-    const formData=new FormData(form);
-    try{
-        await fetch(submitUrl,{method:'POST',body:formData});
-        successTip.style.display='block';
-        form.reset();
-    }catch{
-        errorTip.style.display='block';
-    }
-    submitBtn.disabled=false;
-    submitBtn.innerText='Send Inquiry';
-})
-</script>
     </div>
 </section>
 
