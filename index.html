@@ -175,9 +175,10 @@
     <div class="form-wrap">
         <!--把action="xxx"替换成你自己Formspree表单地址-->
 <div style="max-width:90%;margin:30px auto;">
-<form action="https://formsubmit.co/744304089@qq.com" method="POST">
-    <!-- delay=1：停留1秒自动跳回你的官网，最短等待，保证数据投递成功收邮件 -->
-    <input type="hidden" name="_redirect" value="https://www.designxk.com?delay=1">
+<form id="inquiryForm" action="https://formsubmit.co/744304089@qq.com" method="POST">
+    <!-- 标准跳转地址，表单平台页面停留1秒跳转回站 -->
+    <input type="hidden" name="_redirect" value="https://www.designxk.com">
+    <input type="hidden" name="_delay" value="1">
     <input type="hidden" name="_captcha" value="false">
 
   <input type="text" name="name" placeholder="Your Full Name" required
@@ -189,11 +190,28 @@ style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;
   <textarea name="message" placeholder="Your Message" rows="5" required
 style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;"></textarea>
 
-  <button type="submit" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
+  <button type="submit" id="submitBtn" style="background:#ff7823;color:#fff;border:none;width:100%;padding:18px 0;font-size:18px;font-weight:600;border-radius:4px;margin-top:10px;cursor:pointer;">
     Send Inquiry
   </button>
 </form>
+
+<div id="successTip" style="display:none;background:#28a745;color:white;text-align:center;padding:16px;margin-top:12px;border-radius:4px;">
+Your message sent successfully! We will contact you soon.
 </div>
+</div>
+
+<script>
+const form = document.getElementById('inquiryForm');
+const successTip = document.getElementById('successTip');
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    successTip.style.display = 'block';
+    // 本页面绿色提示停留1000毫秒=1秒，再跳转第三方
+    setTimeout(()=>{
+        form.submit();
+    },1000)
+})
+</script>
 </section>
 
 <!--页脚-->
