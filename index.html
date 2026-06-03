@@ -168,7 +168,7 @@
 </section>
 
 <!--询盘表单【替换formspree链接即可收邮件】-->
-<div>
+<div style="max-width:92%;margin:0 auto;padding:20px 0;">
   <form id="inquiryForm">
     <input type="text" name="name" placeholder="Your Full Name" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
     <input type="email" name="email" placeholder="Your Email Address" required style="width:100%;padding:18px 16px;margin:12px 0;border:none;border-radius:4px;font-size:16px;box-sizing:border-box;">
@@ -191,7 +191,6 @@ const form = document.getElementById('inquiryForm');
 const successTip = document.getElementById('successTip');
 const errorTip = document.getElementById('errorTip');
 const submitBtn = document.getElementById('submitBtn');
-// 已填好你的专属链接
 const submitUrl = 'https://submit.forminit.com/f/rwwydb3t50o';
 
 form.addEventListener('submit', async e=>{
