@@ -75,6 +75,70 @@
             .banner h1{font-size:28px;}
             .nav-a{display:none;}
         }
+         *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+        .advantage-wrap{
+            max-width:1200px;
+            margin:60px auto;
+            padding:0 20px;
+        }
+        .section-title{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .section-title h2{
+            font-size:32px;
+            color:#2c3e50;
+            position:relative;
+            padding-bottom:15px;
+        }
+        .section-title h2::after{
+            content:"";
+            width:60px;
+            height:3px;
+            background:#e76f51;
+            position:absolute;
+            left:50%;
+            transform:translateX(-50%);
+            bottom:0;
+        }
+        .advantage-grid{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:30px;
+        }
+        .advantage-card{
+            background:#f7f7f7;
+            padding:25px;
+            border-radius:6px;
+        }
+        .card-img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+            border-radius:4px;
+            margin-bottom:18px;
+        }
+        .advantage-card h3{
+            color:#2d3748;
+            font-size:20px;
+            margin-bottom:12px;
+        }
+        .advantage-card p{
+            color:#555;
+            line-height:1.6;
+            font-size:15px;
+        }
+        /* 移动端适配 */
+        @media(max-width:768px){
+            .advantage-grid{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
     </style>
 </head>
 <body>
